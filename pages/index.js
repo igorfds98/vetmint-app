@@ -33,7 +33,10 @@ export default function VetMint() {
       <h1 className="text-3xl font-bold text-center text-rose-900 mb-6">VetMint - IA Veterinária</h1>
       <div className="bg-white rounded-lg shadow p-4 h-96 overflow-y-auto space-y-2 mb-4">
         {messages.map((msg, i) => (
-          <div key={i} className={f"p-2 rounded-xl max-w-[80%] {msg.sender === 'user' ? 'ml-auto bg-rose-500 text-white' : 'bg-rose-100 text-rose-800'}"}>
+          <div
+            key={i}
+            className={`p-2 rounded-xl max-w-[80%] ${msg.sender === 'user' ? 'ml-auto bg-rose-500 text-white' : 'bg-rose-100 text-rose-800'}`}
+          >
             <p><strong>{msg.sender === 'user' ? 'Você' : 'VetMint'}:</strong> {msg.text}</p>
           </div>
         ))}
